@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="navbar p-5 bg-orange-100">
       <div className="navbar-start">
-    <a className="btn btn-ghost text-6xl text-orange-600 font-galada">Fooder</a>
+    <a id="logo" className="p-2 btn btn-ghost text-5xl  font-galada">Fooder</a>
   </div>
   <div className=" navbar-center">
     <div >

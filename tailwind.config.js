@@ -17,7 +17,7 @@ export default {
       },
     },
     backgroundImage : {
-      'navBg': "url(../src/assets/nav.png)",
+      'headerBg': "url(../src/assets/header_img.png)",
       'about1': "url(../public/assets/about1.jpg)",
       'about2': "url(../../public/assets/about2.jpg)",
       'about3': "url(../public/assets/about3.jpg)",

@@ -1,0 +1,8 @@
+.circle{
+   border: 4px solid tomato;
+   border-radius: 50%;
+   padding: 2px; 
+   size: 60px;
+   opacity: 80%;
+   
+}
