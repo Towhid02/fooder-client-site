@@ -1,19 +1,22 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useContext } from 'react';
 import { assets } from '../../assets/assets';
 import './FoodItem.css'
+import { StoreContext } from '../../Context/storeContext';
 
 const FoodItem = ({id, name, price, description, image }) => {
-    const [itemCount, setItemCount] = useState(0)
+    const {cartItems, addToCart, removeFromCart, setCartItems}=useContext(StoreContext)
+
     return (
         <div id='food-item' className='bg-gray-300 p- rounded-xl bg-transparent'>
             <div id="food-item-image-container">
                 <img className=' rounded-xl' src={image} alt="" />
-                {  !itemCount 
-                    ?<img id='add' onClick={()=> setItemCount(prev=>prev+1)} src={assets.add_icon_white} alt=''/>
+                {  !cartItems[id] 
+                    ?<img id='add' onClick={()=> addToCart(id)} src={assets.add_icon_white} alt=''/>
                     : <div id='food-item-counter' className=''>
-                        <img onClick={()=>setItemCount(prev=>prev-1)} src={assets.remove_icon_red} alt="" />
-                        <p className='font-itim font-semibold'>{itemCount}</p>
-                        <img onClick={()=>setItemCount(prev=>prev+1)} src={assets.add_icon_green} alt="" />
+                        <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="" />
+                        <p className='font-itim font-semibold'>{cartItems[id]}</p>
+                        <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt="" />
                     </div>
                 }
             </div>

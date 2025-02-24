@@ -11,7 +11,7 @@ import StoreContextProvider from './Context/storeContext';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StoreContextProvider>
-    <div className='max-w-screen-2xl mx-auto text-center bg-white text-black'>
+    <div className='max-w-screen-3xl  mx-auto text-center bg-white text-black'>
       <RouterProvider router={router} />
     </div>
     </StoreContextProvider>

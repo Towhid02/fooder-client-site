@@ -1,8 +1,21 @@
 #header{
    
-    background: #f46b45;
+    /* background: #f46b45; */
     /* background: -webkit-linear-gradient(to right, #d75c39, #f0ac9b, #eea849);  */
-    background: linear-gradient(to right, #d7755a, #df6749, #e29230); 
+    /* background: linear-gradient(to right, #d7755a, #df6749, #e29230); */
+    background-image: "/public/assets/banner.jpg"; 
    
 }
 
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.spin{
+    animation: spin 10s linear infinite;
+}
